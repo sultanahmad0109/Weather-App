@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>header}}
+    <title>Homepage</title>
+</head>
+
+<body>
+    {{>navbar}}
+    <div class="container-fluid main_header">
+        <div class="row">
+            <div class="col-md-10 col-12 mx-auto">
+                <div class="row">
+                    <div class="col-md-6 col-12 header_left">
+                        <p>Welcome to weather app</p>
+                        <h1>Get the latest <span class="text_color">weather</span> info of your city.</h1>
+                        <a href="/weather"><button class="btn">Check now</button></a>
+                    </div>
+                    <div class="col-md-6 col-12 header_right">
+                        <div>
+                            <figure>
+                                <img src="img/fav.png" alt="Temperature" width="85%">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{>footer}}
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>header}}
+    <title>Weather</title>
+</head>
+
+<body>
+    {{>navbar}}
+    <div class="container-fluid main_header">
+        <div class="row">
+            <div class="col-md-10 col-12 mx-auto">
+                <div class="main_content">
+                    <form class="temp_form">
+                        <input type="text" id="cityname" placeholder="Enter city name" autocomplete="off">
+                        <input type="submit" value="search" id="submitBtn">
+                    </form>
+                </div>
+                <div class="tempInfo">
+                    <div class="topLayer">
+                        {{!-- <p id="day">Sunday</p>
+                        <p id="today_date">08 Feb</p> --}}
+                        <p id="date"></p>
+                    </div>
+                    <div class="main_layer">
+                        <p id="city_name">Get you data</p>
+                        <div class="middle_layer data_hide">
+                            <p><span id="temp"></span><sup> o</sup>C</p>
+                            <p id="temp_status"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{>footer}}
+    <script src="JS/main.js"></script>
+    <script>
+        const getCurDay = () => {
+            const dayArr = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+
+            const MonthArr = [
+                "JAN",
+                "FEB",
+                "MAR",
+                "APR",
+                "MAY",
+                "JUN",
+                "JUL",
+                "AUG",
+                "SEP",
+                "OCT",
+                "NOV",
+                "DEC",
+            ];
+
+            const FetchDay = new Date();
+
+            const Day = FetchDay.getDay();
+
+            const Month = FetchDay.getMonth();
+
+            const Dates = FetchDay.getDate();
+
+            var hour = FetchDay.getHours();
+
+            var min = FetchDay.getMinutes();
+
+            var APM = "AM";
+            if (hour > 11) {
+                APM = "PM";
+                hour = hour - 12;
+            }
+
+            if (min < 10) {
+                min = `0${min}`;
+            }
+            return `${dayArr[Day]} | ${Dates} ${MonthArr[Month]} | ${hour}:${min} ${APM}`;
+        };
+        date.innerHTML = getCurDay();
+    </script>
+</body>
+
+</html>
