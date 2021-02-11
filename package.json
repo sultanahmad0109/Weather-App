@@ -1,15 +1,19 @@
 {
   "name": "weatherapp",
+  "homepage": "https://sultanahmad0109.github.io/Weather-App/",
   "version": "1.0.0",
   "description": "Weather App",
   "main": "index.js",
   "scripts": {
+    "predeploy":"npm run build",
+    "deploy": "gh-pages -d build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Sultan Ahmad",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
+    "gh-pages": "^3.1.0",
     "hbs": "^4.1.1"
   }
 }
