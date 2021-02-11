@@ -1,6 +1,5 @@
 {
   "name": "weatherapp",
-  "homepage": "https://sultanahmad0109.github.io/Weather-App/",
   "version": "1.0.0",
   "description": "Weather App",
   "main": "index.js",
